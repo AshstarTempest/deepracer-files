@@ -10,6 +10,7 @@ def reward_function(params):
     marker_1 = 0.1 * track_width
     marker_2 = 0.25 * track_width
     marker_3 = 0.5 * track_width
+	
     
     # Give higher reward if the car is closer to center line and vice versa
     if distance_from_center <= marker_1:
@@ -30,6 +31,9 @@ def reward_function(params):
     else:
 		# High reward if the car stays on track and goes fast
         reward = reward + 1.0 + speed
-
+    print(f'---------speed---------{speed}')
+    print(f'---------reward---------{reward}')
+	
+	
     return float(reward)
 
